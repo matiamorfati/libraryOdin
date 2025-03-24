@@ -48,8 +48,8 @@
   }
 
   :root {
-    --grey: #f4f4f4;
-    --white: #fafdfe;
+    --grey: #ffffff;
+    --white: #eeeeee;
     --black: rgb(29, 29, 29);
   }
 
@@ -67,10 +67,13 @@
     font-style: normal;
   }
 
+  body {
+    background-color: var(--white);
+    height: 100%;
+  }
   .webcontent {
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
   }
 
   .logoNav {
@@ -85,10 +88,11 @@
 
   .navbar {
     display: flex;
+    flex-wrap: wrap;
     font-family: 'thinfont';
     justify-content: space-around;
     background-color: var(--grey);
-    box-shadow: 0 0 5px 2px grey;
+    box-shadow: 0 0 8px rgb(190, 190, 190);
     padding: 0 8rem;
   }
 
@@ -105,6 +109,7 @@
     border-radius: 1rem;
     border-style: inset;
     width: 11rem;
+    padding: 15px;
     font-size: 1.5rem;
     margin: 1.5rem 2.5rem;
     transition-duration: 0.4s;
@@ -162,8 +167,6 @@
     font-weight: 100;
   }
 
-  
-
   .addNewBookButton:hover {
     background-color: var(--grey);
     transition-duration: 0.2s;
@@ -190,10 +193,57 @@
     box-shadow: 0 0 0 var(--black);
   }
 
-  .addNewBookButton:active {
+.addNewBookButton:active {
     top: 1px;
-  }
+}
 /*button vol2 end*/
 
+.gridForBookCards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 0 20rem;
+}
 
+.title{
+  font-weight: bold;
+}
+.bookCard {
+  padding: 1rem;
+  background-color: var(--grey);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 4rem;
+  width: max(90%, 300px);
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  box-shadow: 0 0 7px rgb(206, 205, 205);
+}
+
+.bookCard div {
+  text-align: center;
+}
+
+.footer {
+  display:flex;
+  margin: 5rem 0 2rem;
+  justify-content: center;
+  font-family: 'logo';
+  font-size: 2rem;
+  width: 100%;
+}
+
+.creator {
+  display: block;
+  background-color: var(--grey);
+  width: max(300px, 100px);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px var(--grey);
+}
 
