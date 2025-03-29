@@ -12,47 +12,67 @@
         <div class="navbar">
             <h1 class="logoNav">Library.manage</h1>
             <div class="buttonsNavBar">
-                <button class="navBarButton">Log in</button>
-                <button class="navBarButton">Register</button>
+                <button class="navBarButton" id="loginbtn">Log in</button>
+                <button class="navBarButton" id="registerbtn">Register</button>
             </div>
         </div>  
         <div class="description"></div>
         <div class="addNewBookContainer">
-            <button class="addNewBookButton">+Add Book</button>
+            <button class="addNewBookButton" id="addBookbtn">+Add Book</button>
         </div>
-        <div class="gridForBookCards">
+        <div class="gridForBookCards" id="gridForBooks">
             <div class="bookCard">
                 <div class="title">Czastki Elementarne</div>
                 <div class="author">Michel Houellebecq</div>
                 <div class="genre">Powiesc cyniczna</div>
                 <div class="numOfPages">387</div>
-                <div class="readStatus"></div>
-            </div>
-            <div class="bookCard">
-                <div class="title">Czastki Elementarne</div>
-                <div class="author">Michel Houellebecq</div>
-                <div class="genre">Powiesc cyniczna</div>
-                <div class="numOfPages">387</div>
-                <div class="readStatus"></div>
-            </div>
-            <div class="bookCard">
-                <div class="title">Czastki Elementarne</div>
-                <div class="author">Michel Houellebecq</div>
-                <div class="genre">Powiesc cyniczna</div>
-                <div class="numOfPages">387</div>
-                <div class="readStatus"></div>
-            </div>
-            <div class="bookCard">
-                <div class="title">Czastki Elementarne</div>
-                <div class="author">Michel Houellebecq</div>
-                <div class="genre">Powiesc cyniczna</div>
-                <div class="numOfPages">Pages: 387</div>
-                <div class="readStatus"></div>
+                <button class="readStatus">Read</button>
+                <button class="remove">Remove</button>
             </div>
         </div>
         <div class="footer">
             <div class="creator">@matiamorfati</div>
         </div>
+        <div id="addBookModal">
+            <form class="addBookForm" id="bookForm">
+                <h3>Add new book</h3>
+                <input
+                class="input"
+                type="text"
+                id="title"
+                placeholder="Title"
+                required
+                maxlength="100"
+                />
+                <input
+                class="input"
+                type="text"
+                id="author"
+                placeholder="Author"
+                required
+                maxlength="100"
+                />
+                <input
+                class="input"
+                type="text"
+                id="genre"
+                placeholder="Genre"
+                required
+                max="100"
+                />
+                <input
+                class="input"
+                type="number"
+                id="pages"
+                placeholder="Pages"
+                required
+                max="10000"
+                />
+                <button type="button" id="isRead" class="readQuestion">Have you read it?</button>
+                <button type="submit" id="submitButton" class="SubmitNewBook">+Add</button>
+            </form>
+        </div>
     </div>
+<script src="./script.js"></script>
 </body>
 </html>
