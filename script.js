@@ -24,8 +24,10 @@ if(!new.target){
 const book1 = new Book('Autorytarna polska', 'autorytet', 'history', 824, true );
 const book2 = new Book('W oczach zemsty', 'Grzegorz Urban', 'drama', 246, false );
 const book3 = new Book('Serotonina', 'Michel Houellebecq', 'crime', 366, true );
-
-myLibrary.push(book1, book2, book3);
+const book4 = new Book('Autorytarna polska', 'autorytet', 'history', 824, true );
+const book5 = new Book('W oczach zemsty', 'Grzegorz Urban', 'drama', 246, false );
+const book6 = new Book('Serotonina', 'Michel Houellebecq', 'crime', 366, true );
+myLibrary.push(book1, book2, book3, book4, book5, book6);
 
 function renderLibrary() {
 
@@ -41,7 +43,7 @@ function renderLibrary() {
             <div class="author">${book.author}</div>
             <div class="genre">${book.genre}</div>
             <div class="numOfPages">${book.numOfPages} pages</div>
-            <button class="readStatus ${book.readStatus ? 'read' : 'not-read'}" data-id="${book.id}">${book.readStatus ? 'Read' : 'Not Read yet'}</button>
+            <button class="readStatus ${book.readStatus ? 'read' : 'not-read'}" data-id="${book.id}">${book.readStatus ? 'Read' : 'Not read yet'}</button>
             <button class="remove" data-id="${book.id}">Remove</button>
         `;
 
