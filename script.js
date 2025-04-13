@@ -4,20 +4,21 @@
 
 let myLibrary = [];
 
-function Book(title, author, genre, numOfPages, readStatus){
+class Book{
 
-if(!new.target){
-    throw new Error("You have to use the 'new' operator to create new object");
-}
-
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-    this.numOfPages = numOfPages;
-    this.readStatus = readStatus;
-    this.id = crypto.randomUUID();
-
-}
+    constructor(title, author, genre, numOfPages, readStatus){
+    
+    
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.numOfPages = numOfPages;
+        this.readStatus = readStatus;
+        this.id = crypto.randomUUID();
+    }
+    
+    
+    }
 
 //Testy na dodanie nowej ksiazki
 
